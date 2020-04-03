@@ -1,6 +1,6 @@
 require "paradin/version"
-
-module Paradin
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require "paradin/error"
+require "paradin/context"
+require "paradin/configuration"
+require "paradin/task"
+require "paradin/base"
