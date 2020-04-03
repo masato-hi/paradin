@@ -5,6 +5,7 @@ module Paradin
     def enqueue(*args, **kwargs)
       context = Context.new(*args, **kwargs)
       context_queue.push(context)
+      nil
     end
 
     def async

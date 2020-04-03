@@ -1,8 +1,6 @@
 # Paradin
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/paradin`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Multi thread processing wrapper library for Ruby (Rails supported)
 
 ## Installation
 
@@ -22,7 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+class ParallelTask < Paradin::Base
+  timeout 5
+  max_threads 3
+
+  def perform(x, y)
+    sleep 1
+    x + y
+  end
+end
+
+task = ParallelTask.new
+5.times do |i|
+  task.enqueue(i, i)
+end
+
+# Response in 2 seconds
+task.await #=> [0, 2, 4, 6, 8]
+```
 
 ## Development
 
