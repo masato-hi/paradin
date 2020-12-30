@@ -54,7 +54,7 @@ jobs:
 
       - name: bundle install
         run: |
-          gem install bundler --no-document
+          gem install bundler --no-document -v 1.17.0
 
       - name: bundle update
         run: |
