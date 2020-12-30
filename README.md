@@ -2,6 +2,8 @@
 
 Multi thread processing wrapper library for Ruby (Rails supported)
 
+![test](https://github.com/masato-hi/paradin/workflows/test/badge.svg)
+
 ## Installation
 
 Add this line to your application's Gemfile:
